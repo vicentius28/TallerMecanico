@@ -1,0 +1,25 @@
+.dropdownp{
+    width: auto;
+    height: auto;
+    background-color: white;
+    border-color: white;
+    color: black;
+    background:none;border: none;
+}
+.dropdownp:hover{
+    color: red;
+    background-color: white;
+    border-color: beige;
+}
+.dropdownp:active{
+        color: red;
+        background-color: white;
+        border-color: beige;
+}
+.dropdown_sub{
+    font-size: small;
+}
+
+.navbar-default .navbar-nav>.open>a.dropdown-toggle{
+    background-color: #ffffff !important;
+  }

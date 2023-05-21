@@ -1,0 +1,46 @@
+.fon-equip {
+    background-image: url('https://w0.peakpx.com/wallpaper/744/1022/HD-wallpaper-lightning-mcqueen-animation-cars-cars-3-funny.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #050505;
+}
+
+.redon {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+.conte {
+    display: flex;
+}
+.conte1 {
+    display: flow-root;
+}
+.info {
+    display: none;
+}
+.conte:hover .info {
+    display: flow-root;
+    margin-right: 10px;
+    flex-wrap: wrap;
+    color: black;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+.info{
+border-radius: 25px;
+    background: #dd7d11;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+.grad1 {
+    height: 700px;
+    background-color: red; 
+    background-image: linear-gradient(red, yellow);
+}

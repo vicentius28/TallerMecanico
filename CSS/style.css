@@ -1,0 +1,198 @@
+.parrafo-especial {
+    background-color: brown;
+    text-decoration: black;
+    display: inline-block;
+    padding: 10px;
+    color: #ffffff;
+    border: 3px solid yellow;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    animation-name: ejemplo;
+    animation-duration: 20s;
+}
+
+.parrafo-especial:hover {
+    background-color: red;
+    transform: scale(1.2);
+}
+
+.parrafo-frenos {
+    color: rgb(255, 255, 127);
+}
+
+.parrafo-alineacion {
+    margin-left: 800px;
+    background-color: red;
+    text-decoration: pink;
+    display: inline-block;
+    padding: 20px;
+    color: white;
+    border: 3px solid yellow;
+    border-radius: 15px 50px;
+    transition: all 400ms ease;
+
+}
+
+.movimiento-divs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.card-1 {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgb(254, 0, 0);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+}
+
+.card-1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-1 .info-1 {
+    padding: 10px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+ul {
+    font-family: "Chivo Mono" monospace;
+    display: flex;
+    gap: 72px;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: 0.5s ease;
+}
+
+ul:hover li a {
+    color: red;
+}
+
+ul :hover li a:not(:hover) {
+    color: white;
+    opacity: 0.3;
+    filter: blur(1px);
+}
+
+
+/* estilos generales del formulario */
+.form-container1 {
+    max-width: 5000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form1 {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    opacity: 1;
+}
+
+.form1 h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.p1 {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.boton-form1 {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton-form1:hover {
+    transform: scale(1.2);
+}
+
+.style-A {
+    width: 150px;
+    height: 150px;
+    justify-content: left;
+    text-align: left;
+}
+
+.bus {
+    width: 50px;
+    height: 50px;
+    background: red;
+    transition: width 1s;
+}
+
+.bus:hover {
+    width: 300px;
+
+}
+
+.body-fre {
+    background-image: url('https://resizer.iproimg.com/unsafe/880x/filters:format(webp)/https://assets.iprofesional.com/assets/jpg/2020/03/492392.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #050505;
+}
+
+.navsearch {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 25%;
+    opacity: 1;
+    margin-left: 74%;
+    position: static;
+    transform: translate(-5%, -40%);
+}
