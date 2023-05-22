@@ -17,60 +17,27 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function nav() {
+            $("#includeHtml").load("nav.html");
+        });
+    </script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid f-c">
-            <img class="animate__animated animate__bounce" src="imagen/rasho.png" alt="10" width="50" height="30">
-            <a class="navbar-brand animate__animated animate__bounce" href="caso.html">Taller Mecánico Rayo Makween</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="dropdown " style="padding-right: 60px;">
-                <button class="btn btn-secondary dropdown-toggle dropdownp" style="background:none;border: none; color: black;" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Trabajos
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item dropdown_sub" href="frenos.html">Frenos</a></li>
-                    <li><a class="dropdown-item dropdown_sub" href="ba.html">otros trabajos</a></li>
-                </ul>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link animate__animated animate__bounce" href="equipo.html">Equipo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link animate__animated animate__bounce" href="#">Cotizaciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link animate__animated animate__bounce" href="#">Ayuda al cliente</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link animate__animated animate__bounce" href="inis.html">inicio o registro</a>
-                    </li>
-                </ul>
-                <form class="d-flex bus animate__animated animate__bounce">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="boton-form1" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
+    <!--nav-->
+    <div id="includeHtml" style="position: relative; z-index: 2;"></div>
     <div class="grad1">
         <div class="conte">
-            <img class="redon animate__animated animate__backInUp" src="https://img.freepik.com/foto-gratis/mecanico-automoviles-que-usa-herramienta-diagnostico-mientras-verifica-voltaje-bateria-automovil-taller_637285-4267.jpg?w=1060&t=st=1681709190~exp=1681709790~hmac=5e3776bea893a9272a80fb47b73ae745fa11227afe4f229e9317191569806002"
-             alt="">
+            <img class="redon animate__animated animate__backInUp"
+                src="https://img.freepik.com/foto-gratis/mecanico-automoviles-que-usa-herramienta-diagnostico-mientras-verifica-voltaje-bateria-automovil-taller_637285-4267.jpg?w=1060&t=st=1681709190~exp=1681709790~hmac=5e3776bea893a9272a80fb47b73ae745fa11227afe4f229e9317191569806002"
+                alt="">
             <div class="info animate__animated animate__flash">
                 <h5>Nombre:</h5>
-                    <p>Roberto Rodriguez</p>
-                    <h5>Ocupacion:</h5>
-                    <p>Mecanico</p>
+                <p>Roberto Rodriguez</p>
+                <h5>Ocupacion:</h5>
+                <p>Mecanico</p>
             </div>
             <div class="conte1">
                 <img class="redon animate__animated animate__backInUp" src="imagen/trab1.jpg" alt="">
@@ -82,7 +49,8 @@
                 </div>
             </div>
             <div class="conte1">
-                <img class="redon animate__animated animate__backInUp" src="https://u360campus.com/wp-content/uploads/2021/11/Featured_11302021-770x400.jpg" alt="">
+                <img class="redon animate__animated animate__backInUp"
+                    src="https://u360campus.com/wp-content/uploads/2021/11/Featured_11302021-770x400.jpg" alt="">
                 <div class="info animate__animated animate__flash">
                     <h5>Nombre:</h5>
                     <p>Romina Diaz</p>
@@ -93,23 +61,26 @@
         </div>
         <hr>
         <div>
-            <p style="color: yellow;">¿Desea volver?<a href="caso.html">Aqui</a></p>
+            <p style="color: yellow;">¿Desea volver?<a href="index.php">Aqui</a></p>
         </div>
     </div>
     <footer class="footer">
         <h3 style="font-style: italic; color: crimson;">¡Encuentranos en!</h3>
         <div class="button">
-          <div class="top-social">
-            <ul>
-              <li><a href="https://es-la.facebook.com/" class="facebook"><i class="fa fa-facebook-f fa-2x"></i></a></li>
-              <li><a href="https://www.instagram.com/" class="instagram"><i class="fa fa-instagram fa-2x"></i></a></li>
-              <li><a href="https://twitter.com/" class="twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
-              <li><a href="https://www.youtube.com/" class="youtube"><i class="fa fa-youtube fa-2x"></i></a></li>
-            </ul>
-            <p style="font-style: italic; color: crimson; font-size: 20px;">Te esperamos en nuestra Sucursal av.cuchau 95 cerca de la ruta 66😉</p>
-          </div>
+            <div class="top-social">
+                <ul>
+                    <li><a href="https://es-la.facebook.com/" class="facebook"><i
+                                class="fa fa-facebook-f fa-2x"></i></a></li>
+                    <li><a href="https://www.instagram.com/" class="instagram"><i class="fa fa-instagram fa-2x"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/" class="twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li><a href="https://www.youtube.com/" class="youtube"><i class="fa fa-youtube fa-2x"></i></a></li>
+                </ul>
+                <p style="font-style: italic; color: crimson; font-size: 20px;">Te esperamos en nuestra Sucursal
+                    av.cuchau 95 cerca de la ruta 66😉</p>
+            </div>
         </div>
-      </footer>
+    </footer>
 </body>
 
 </html>

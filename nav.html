@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" type="text/css" href="CSS/nav.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -12,30 +13,21 @@
 </head>
 
 <body>
-    <div class="animate__animated animate__bounce">
-        <nav class="navbar navbar-expand-lg" style="max-width: max-content;">
-            <div class="container-fluid f-c">
-                <img class="animate__animated animate__bounce" src="imagen/rasho.png" alt="10" width="50" height="30">
-                <a class="navbar-brand animate__animated animate__bounce" href="caso.html">Taller Mecánico Rayo
-                    Makween</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="dropdown, nav-link animate__animated animate__bounce"
-                    style="max-width: max-content; padding-right: 8%">
-                    <button class="btn btn-secondary dropdown-toggle dropdownp"
-                        style="background:none;border: none; color: black;" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Trabajos
-                    </button>
-                    <ul class="dropdown-menu" style="z-index: 10;">
-                        <li><a class="dropdown-item dropdown_sub" href="frenos.html">Frenos</a></li>
-                        <li><a class="dropdown-item dropdown_sub" href="ba.html">otros trabajos</a></li>
-                    </ul>
-                </div>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0," style="max-width: max-content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid f-c">
+            <img class="animate__animated animate__bounce" src="imagen/rasho.png" alt="10" width="50" height="30">
+            <a class="navbar-brand" href="index.php">Taller Mecánico Rayo Makween</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex bus">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="boton-form1" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="equipo.html">Equipo</a>
                     </li>
@@ -49,14 +41,40 @@
                         <a class="nav-link" href="inis.html">inicio o registro</a>
                     </li>
                 </ul>
-                <form class="d-flex bus animate__animated animate__bounce,">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="boton-form1" type="submit">Search</button>
-                </form>
+                <div class="dropdown navbar-nav me-auto mb-2 mb-lg-0">
+                    <button class="btn btn-secondary dropdown-toggle dropdownp"
+                        style="background:none;border: none; color: black;" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Trabajos
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item dropdown_sub" href="frenos.html">Frenos</a></li>
+                        <li><a class="dropdown-item dropdown_sub" href="ba.html">otros trabajos</a></li>
+                    </ul>
+                </div>
             </div>
-    </div>
-    </div>
+        </div>
     </nav>
+
+    <form>
+        <div class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-adornedEnd css-iiwz1f"><input
+                name="search" placeholder="Busca un producto" type="text"
+                class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1l6tkpo" value="">
+            <div class="MuiInputAdornment-root MuiInputAdornment-positionEnd css-112j2v0"><button
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1j0zpho" tabindex="0"
+                    type="button"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true" role="img" class="MuiBox-root css-ej8pfa iconify iconify--eva" width="1em"
+                        height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <g id="iconifyReact48">
+                            <g id="iconifyReact49">
+                                <path id="iconifyReact50" fill="currentColor"
+                                    d="m20.71 19.29l-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8a7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.42ZM5 11a6 6 0 1 1 6 6a6 6 0 0 1-6-6Z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg><span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
+        </div>
+    </form>
 </body>
 
 </html>

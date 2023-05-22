@@ -30,7 +30,6 @@
     border: 3px solid yellow;
     border-radius: 15px 50px;
     transition: all 400ms ease;
-
 }
 
 .movimiento-divs {
@@ -176,23 +175,5 @@ ul :hover li a:not(:hover) {
 
 }
 
-.body-fre {
-    background-image: url('https://resizer.iproimg.com/unsafe/880x/filters:format(webp)/https://assets.iprofesional.com/assets/jpg/2020/03/492392.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #050505;
-}
 
-.navsearch {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 25%;
-    opacity: 1;
-    margin-left: 74%;
-    position: static;
-    transform: translate(-5%, -40%);
-}
+

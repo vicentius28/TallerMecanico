@@ -1,0 +1,45 @@
+ul {
+    font-family: "Chivo Mono" monospace;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    gap: 30px;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-transform: uppercase;
+    padding: 10px;
+    transition: 0.5s ease;
+}
+
+ul:hover li a {
+    color: red;
+}
+
+ul :hover li a:not(:hover) {
+    color: white;
+    opacity: 0.3;
+    filter: blur(1px);
+}
+
+.body-fre {
+    background-image: url('https://resizer.iproimg.com/unsafe/880x/filters:format(webp)/https://assets.iprofesional.com/assets/jpg/2020/03/492392.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #050505;
+}
+
+.boton-form1 {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

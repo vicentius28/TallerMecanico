@@ -16,51 +16,17 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function nav() {
+            $("#includeHtml").load("nav.html");
+        });
+    </script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid f-c">
-            <img class="animate__animated animate__bounce" src="imagen/rasho.png" alt="10" width="50" height="30">
-            <a class="navbar-brand animate__animated animate__bounce" href="caso.html">Taller Mecánico Rayo Makween</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="dropdown " style="padding-right: 60px;">
-                <button class="btn btn-secondary dropdown-toggle dropdownp" style="background:none;border: none; color: black;" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Trabajos
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item dropdown_sub" href="frenos.html">Frenos</a></li>
-                    <li><a class="dropdown-item dropdown_sub" href="ba.html">otros trabajos</a></li>
-                </ul>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link animate__animated animate__bounce" href="equipo.html">Equipo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link animate__animated animate__bounce" href="#">Cotizaciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link animate__animated animate__bounce" href="#">Ayuda al cliente</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link animate__animated animate__bounce" href="inis.html">inicio o registro</a>
-                    </li>
-                </ul>
-                <form class="d-flex bus animate__animated animate__bounce">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="boton-form1" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-    
+    <!--nav-->
+    <div id="includeHtml" style="position: relative"></div>
     <div class="body-fre">
         <video class="animate__animated animate__backInLeft" style="justify-content: center; margin-left: 400px;"
             src="video/¡AUTODOC TOUR COMPLETO POR EL TALLER!.mp4" width="640px" height="360px" autoplay loop controls>
@@ -76,7 +42,8 @@
                 </div>
             </div>
             <div class="card-1 animate__animated animate__bounceInUp">
-                <img src="https://motor.elpais.com/wp-content/uploads/2019/04/cambio-aceite-coche.jpg" alt="" width="300px" height="300px">
+                <img src="https://motor.elpais.com/wp-content/uploads/2019/04/cambio-aceite-coche.jpg" alt=""
+                    width="300px" height="300px">
                 <div class="info-1">
                     <h3>Cambio de aceites</h3>
                     <p>Se le cambia el aceite por que en taller mckueen nos importa tu vehiculo
@@ -85,34 +52,37 @@
             </div>
             <div class="card-1 animate__animated animate__bounceInUp">
                 <img src="https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/251864/f632babd89bb2cd85e67e59444a2d0661e293061.XL2.jpg"
-                 alt="" width="300px" height="300px">
+                    alt="" width="300px" height="300px">
                 <div class="info-1">
                     <h3>Balanceo de neumatico</h3>
                     <p>Se puede ver como nuestros profesionales trabajan con lo mejor en tecnologia Cuchau
                     </p>
                 </div>
             </div>
-            
+
         </div>
-        
+
     </div>
     <footer class="footer">
         <h3 style="font-style: italic; color: crimson;">¡Encuentranos en!</h3>
         <div class="button">
-          <div class="top-social">
-            <ul>
-              <li><a href="https://es-la.facebook.com/" class="facebook"><i class="fa fa-facebook-f fa-2x"></i></a></li>
-              <li><a href="https://www.instagram.com/" class="instagram"><i class="fa fa-instagram fa-2x"></i></a></li>
-              <li><a href="https://twitter.com/" class="twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
-              <li><a href="https://www.youtube.com/" class="youtube"><i class="fa fa-youtube fa-2x"></i></a></li>
-            </ul>
-            <p style="font-style: italic; color: crimson; font-size: 20px;">Te esperamos en nuestra Sucursal av.cuchau 95 cerca de la ruta 66😉</p>
-          </div>
+            <div class="top-social">
+                <ul>
+                    <li><a href="https://es-la.facebook.com/" class="facebook"><i
+                                class="fa fa-facebook-f fa-2x"></i></a></li>
+                    <li><a href="https://www.instagram.com/" class="instagram"><i class="fa fa-instagram fa-2x"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/" class="twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li><a href="https://www.youtube.com/" class="youtube"><i class="fa fa-youtube fa-2x"></i></a></li>
+                </ul>
+                <p style="font-style: italic; color: crimson; font-size: 20px;">Te esperamos en nuestra Sucursal
+                    av.cuchau 95 cerca de la ruta 66😉</p>
+            </div>
         </div>
         <div>
-            <p style="color: white;">¿Desea volver? <a href="caso.html">Aqui</a></p>
+            <p style="color: white;">¿Desea volver? <a href="index.php">Aqui</a></p>
         </div>
-      </footer>
+    </footer>
 </body>
 
 </html>
