@@ -10,71 +10,95 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script>
+        import { button } from "@mui/material/button;"
+        import '@fontsource/roboto/300.css';
+        import '@fontsource/roboto/400.css';
+        import '@fontsource/roboto/500.css';
+        import '@fontsource/roboto/700.css';
+        import CssBaseline from '@mui/material/CssBaseline';
+
+        export default function MyApp() {
+            return (
+                <React.Fragment>
+                    <CssBaseline />
+                    {/* The rest of your application */}
+                </React.Fragment>
+            );
+        }
+    </script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid f-c">
             <img class="animate__animated animate__bounce" src="imagen/rasho.png" alt="10" width="50" height="30">
-            <a class="navbar-brand" href="index.php">Taller Mecánico Rayo Makween</a>
+            <a class="navbar-brand" href="index.php">TALLER MECANICO RAYO MCQUEEN</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="d-flex bus">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="boton-form1" type="submit">Search</button>
-                </form>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="css-est-bus"><input name="search" placeholder="Buscador" type="text" class="css-search"
+                        value="">
+                    <button class="css-btnbus" type="button">
+                        <svg class="css-btncaja" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="white"
+                                d="m20.71 19.29l-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8a7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.42ZM5 11a6 6 0 1 1 6 6a6 6 0 0 1-6-6Z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ul-enlances">
                     <li class="nav-item">
-                        <a class="nav-link" href="equipo.html">Equipo</a>
+                        <a class="nav-link css-nav" href="equipo.html">EQUIPO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cotizaciones</a>
+                        <a class="nav-link css-nav" href="#">COTIZACIONES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Ayuda al cliente</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="inis.html">inicio o registro</a>
+                        <a class="nav-link css-nav" href="#">AYUDA AL CLIENTE</a>
                     </li>
                 </ul>
                 <div class="dropdown navbar-nav me-auto mb-2 mb-lg-0">
-                    <button class="btn btn-secondary dropdown-toggle dropdownp"
-                        style="background:none;border: none; color: black;" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Trabajos
+                    <button class="css-nav dropdown-toggle dropdownp" type="button" data-bs-toggle="dropdown">
+                        <span>
+                            <svg class="css-menu-int" focusable="false" aria-hidden="true"
+                                data-testid="AccountCircleIcon">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z">
+                                </path>
+                            </svg></span>
+                        <p class="css-menu-caja">PERFIL</p><svg class="css-menu-int" focusable="false"
+                            aria-hidden="true">
+                        </svg><span class="css-w0pj6f"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item dropdown_sub" href="frenos.html">Frenos</a></li>
-                        <li><a class="dropdown-item dropdown_sub" href="ba.html">otros trabajos</a></li>
+                        <li><a class="dropdown-item dropdown_sub css-nav" href="inis.html">INICIAR SESIÓN</a></li>
+                        <li><a class="dropdown-item dropdown_sub css-nav" href="regis.html">REGISTRARSE</a>
+                        </li>
                     </ul>
                 </div>
+                <div class="dropdown navbar-nav me-auto mb-2 mb-lg-0">
+                    <button class="css-nav dropdown-toggle dropdownp" type="button" data-bs-toggle="dropdown">
+                        <p class="css-menu-caja">TRABAJOS</p><svg class="css-menu-int" focusable="false"
+                            aria-hidden="true"></svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item dropdown_sub" href="frenos.html">FRENOS</a></li>
+                        <li><a class="dropdown-item dropdown_sub" href="ba.html">OTROS TRABAJOS</a></li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </nav>
 
-    <form>
-        <div class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-adornedEnd css-iiwz1f"><input
-                name="search" placeholder="Busca un producto" type="text"
-                class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd css-1l6tkpo" value="">
-            <div class="MuiInputAdornment-root MuiInputAdornment-positionEnd css-112j2v0"><button
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1j0zpho" tabindex="0"
-                    type="button"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" class="MuiBox-root css-ej8pfa iconify iconify--eva" width="1em"
-                        height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                        <g id="iconifyReact48">
-                            <g id="iconifyReact49">
-                                <path id="iconifyReact50" fill="currentColor"
-                                    d="m20.71 19.29l-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8a7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.42ZM5 11a6 6 0 1 1 6 6a6 6 0 0 1-6-6Z">
-                                </path>
-                            </g>
-                        </g>
-                    </svg><span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
-        </div>
-    </form>
+
+
+
+
 </body>
 
 </html>

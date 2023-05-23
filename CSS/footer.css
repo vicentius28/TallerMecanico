@@ -1,22 +1,25 @@
-:root{
+:root {
     border-radius: 50%;
     --facebook: #3b5999;
     --instagram: #e4405f;
     --twitter: #55acee;
     --youtube: #ff0101;
 }
-.footer{
+
+.footer {
     background-color: rgb(31, 30, 30);
     padding: 1em;
     text-align: center;
 }
+
 .button {
     min-width: 300px;
     display: flex;
     justify-content: space-around;
 
 }
-.button ul li a{
+
+.button ul li a {
     display: block;
     text-decoration: none;
     font-size: 30px;
@@ -25,37 +28,38 @@
     line-height: 80px;
     text-align: center;
     background: #314652;
-    color:#ffffff;
+    color: #ffffff;
     border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     transition: all 0.4s ease-in-out;
-    
+
 }
 
-.button ul li:hover{
+.button ul li:hover {
     transform: scale(1.4);
-    
+
 }
 
 
-.button ul li .facebook:hover{
-    
+.button ul li .facebook:hover {
+
     border-radius: 50%;
     background: var(--facebook);
 }
 
-.button ul li .instagram:hover{
+.button ul li .instagram:hover {
     background: var(--instagram);
 }
 
-.button ul li .twitter:hover{
+.button ul li .twitter:hover {
     background: var(--twitter);
 }
 
-.button ul li .youtube:hover{
+.button ul li .youtube:hover {
     background: var(--youtube);
 }
-.body{
+
+.body {
     overflow-x: hidden;
     background-color: #314652;
     font-family: sans-serif;
@@ -63,7 +67,27 @@
     display: grid;
     height: 100vh;
     grid-template-rows: auto 1fr auto;
-
 }
 
+ul {
+    font-family: "Chivo Mono" monospace;
+    display: flex;
+    gap: 72px;
+}
 
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: 0.5s ease;
+}
+
+ul :hover li a:not(:hover) {
+    opacity: 0.3;
+    filter: blur(1px);
+}

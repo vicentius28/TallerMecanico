@@ -2,21 +2,38 @@
 <html lang="en">
 
 <head>
+  <?php
+  header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+  header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
+  ?>
+  <!--limpiar cache-->
+  <meta http-equiv=”Expires” content=”0″>
+  <meta http-equiv=”Last-Modified” content=”0″>
+  <meta http-equiv=”Cache-Control” content=”no-cache, mustrevalidate”>
+  <meta http-equiv=”Pragma” content=”no-cache”>
+  <!--html-->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taller Mecánico Rayo MCQween</title>
+  <title>TALLER MECANICO RAYO MCQUEEN</title>
   <link rel="website icon" type="png" href="imagen/rasho.png">
-  <link rel="stylesheet" type="text/css" href="CSS/footer.css">
-  <link rel="stylesheet" type="text/css" href="CSS/trabajos.css">
-  <link rel="stylesheet" type="text/css" href="CSS/formulario.css">
+  <!--css-->
+  <link rel="stylesheet" type="text/css" href="CSS/footer.css?1.0" media="all" ">
+  <link rel=" stylesheet" type="text/css" href="CSS/trabajos.css?1.0" media="all" ">
+  <link rel=" stylesheet" type="text/css" href="CSS/formulario.css?1.0" media="all" ">
+  <link rel=" stylesheet" type="text/css" href="CSS/parrafos.css">
+  <!--bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <!--cloudfare-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!--jquery-->
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!--sweetalert-->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="sweetalert2.all.min.js"></script>
+  <!--llamar al nav-->
   <script>
     $(function nav() {
       $("#includeHtml").load("nav.html");
@@ -25,7 +42,7 @@
 </head>
 
 <body>
-  <!--nav-->
+  <!--incluir nav-->
   <div id="includeHtml" style="position: relative; z-index: 2;"></div>
   <!--carrusel-->
   <div class="CONTENEDOR" style="width: auto; height: auto; z-index: 1;">
