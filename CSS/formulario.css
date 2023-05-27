@@ -1,14 +1,13 @@
 .formail {
     background-color: gainsboro;
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 25%;
+    width: 400px;
+    margin: auto;
+    border-radius: 7px;
     opacity: 1;
-    margin-left: 74%;
     position: static;
-    transform: translate(-5%, -40%);
 }
 
 .formail h2 {
@@ -32,6 +31,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .boton-formail {
     background-color: #ff0000;
     color: #fff;
@@ -41,6 +41,13 @@
     font-size: 16px;
     cursor: pointer;
 }
-.boton-formail:hover{
+
+.boton-formail:hover {
     transform: scale(1.2);
+}
+
+@media (max-width:480) {
+    formail {
+        width: 100%;
+    }
 }

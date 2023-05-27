@@ -99,7 +99,6 @@ try {
         throw new Exception($mail->ErrorInfo);
     }
 } catch (Exception $e) {
-    header("refresh:3;url=index.php");
 ?>
     <script>
         Swal.fire({

@@ -53,7 +53,7 @@ ul li a {
 }
 
 ul:hover li a {
-    color: red;
+    color: rgb(255, 0, 0);
 }
 
 ul :hover li a:not(:hover) {

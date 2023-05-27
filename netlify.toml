@@ -1,4 +1,4 @@
 [[redirects]]
 from = "/*"
-to = "/index.htaccess"
+to = "/index.php"
 status = 200
