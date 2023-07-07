@@ -1,9 +1,10 @@
 <header>
-    <link rel=" stylesheet" type="text/css" href="CSS/nav.css">
+    {% load static %}
+    <link rel=" stylesheet" type="text/css" href='{% static "CSS/nav.css" %}'>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid f-c">
-            <img class="animate__animated animate__bounce" src="imagen/rasho.png" alt="10" width="50" height="30">
-            <a class="navbar-brand" href="index.php">TALLER MECANICO RAYO MCQUEEN</a>
+            <img class="animate__animated animate__bounce" src='{% static "imagen/rasho.png" %}' alt="10" width="50" height="30">
+            <a class="navbar-brand" href='{% static "index.php" %}'>TALLER MECANICO RAYO MCQUEEN</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -22,10 +23,10 @@
                 </div>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ul-enlances">
                     <li class="nav-item">
-                        <a class="nav-link css-nav" href="equipo.html">EQUIPO</a>
+                        <a class="nav-link css-nav" href='{% static "equipo.html" %}'>EQUIPO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link css-nav" href="marcas.html">MARCAS</a>
+                        <a class="nav-link css-nav" href='{% static "marcas.html" %}'>MARCAS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link css-nav" href="#">AYUDA AL CLIENTE</a>
@@ -45,8 +46,8 @@
                         </svg><span class="css-w0pj6f"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item dropdown_sub css-nav" href="inis.html">INICIAR SESIÓN</a></li>
-                        <li><a class="dropdown-item dropdown_sub css-nav" href="regis.html">REGISTRARSE</a>
+                        <li><a class="dropdown-item dropdown_sub css-nav" href='{% static "inis.html" %}'>INICIAR SESIÓN</a></li>
+                        <li><a class="dropdown-item dropdown_sub css-nav" href='{% static "regis.html" %}'>REGISTRARSE</a>
                         </li>
                     </ul>
                 </div>
@@ -56,8 +57,8 @@
                             aria-hidden="true"></svg>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item dropdown_sub css-nav" href="frenos.html">FRENOS</a></li>
-                        <li><a class="dropdown-item dropdown_sub css-nav" href="otros.html">OTROS TRABAJOS</a></li>
+                        <li><a class="dropdown-item dropdown_sub css-nav" href='{% static "frenos.html" %}'>FRENOS</a></li>
+                        <li><a class="dropdown-item dropdown_sub css-nav" href='{% static "otros.html" %}'>OTROS TRABAJOS</a></li>
                     </ul>
                 </div>
 

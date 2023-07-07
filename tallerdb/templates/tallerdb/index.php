@@ -4,17 +4,17 @@
 
 <head>
   <!--css-->
-  <link rel="stylesheet" type="text/css" href="CSS/footer.css">
-  <link rel=" stylesheet" type="text/css" href="CSS/trabajos.css">
-  <link rel=" stylesheet" type="text/css" href="CSS/formulario.css">
-  <link rel=" stylesheet" type="text/css" href="CSS/parrafos.css">
-  <link rel=" stylesheet" type="text/css" href="CSS/nav.css">
+  <link rel="stylesheet" type="text/css" href='{% static "CSS/footer.css" %}'>
+  <link rel=" stylesheet" type="text/css" href='{% static "CSS/trabajos.css" %}'>
+  <link rel=" stylesheet" type="text/css" href='{% static "CSS/formulario.css" %}'>
+  <link rel=" stylesheet" type="text/css" href='{% static "CSS/parrafos.css" %}'>
+  <link rel=" stylesheet" type="text/css" href='{% static "CSS/nav.css" %}'>
   <!--html-->
   <title>TALLER MECANICO RAYO MCQUEEN</title>
   <meta charset=" UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="website icon" type="png" href="imagen/rasho.png">
+  <link rel="website icon" type="png" href='{% static "imagen/rasho.png" %}'>
   <!--limpiar cache-->
   <meta http-equiv=”Expires” content=”0″>
   <meta http-equiv=”Last-Modified” content=”0″>
@@ -26,9 +26,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!--jquery-->
-  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src=https://code.jquery.com/jquery-1.11.3.min.js></script>
   <!--sweetalert-->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src=https://cdn.jsdelivr.net/npm/sweetalert2@11></script>
 </head>
 
 <body>
@@ -36,7 +36,7 @@
   <div id="container">
     <div include-Html="nav.html"></div>
   </div>
-  <script src="assets/js/include-html.js"></script>
+  <script src='{% static "assets/js/include-html.js" %}'></script>
   <!--carrusel-->
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -48,12 +48,12 @@
       <div class="carousel-item active">
         <h5 class="animate__animated animate__bounceOutRight" style="font-size: 5em; margin-left: 30%; color: red;">
           ¡¡¡Bienvenidos!!!</h5>
-        <img src="imagen/rasho.png" class="d-block w-100" alt="10">
+        <img src='{% static "imagen/rasho.png" %}' class="d-block w-100" alt="10">
         <div class="carousel-caption d-none d-md-block">
           <h5 class="parrafo-frenos">Trabajos</h5>
           <p class="parrafo-frenos">Aquí podra ver algunos trabajos realizados</p>
           <div class="card-link">
-            <a class="link" href="frenos.html">
+            <a class="link" href='{% static "frenos.html" %}'>
               <p class="box">
                 <p class="parrafo-especial">Ver más</p>
               </p>
@@ -62,12 +62,12 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="imagen/mecanico-automoviles-cambiando-ruedas-coche.jpg" class="d-block w-100" alt="10">
+        <img src='{% static "imagen/mecanico-automoviles-cambiando-ruedas-coche.jpg" %}' class="d-block w-100" alt="10">
         <div class="carousel-caption d-none d-md-block">
           <h5 class="parrafo-frenos">Mecánicos</h5>
           <p class="parrafo-frenos">Aqui podra ver el equipo como trabaja</p>
           <div class="card-link">
-            <a class="link" href="otros.html">
+            <a class="link" href='{% static "otros.html" %}'>
               <p class="box">
                 <p class="parrafo-especial">Ver mas</p>
               </p>
@@ -76,7 +76,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="imagen/trabajador-servicio-coche-musculoso-reparando-vehiculo.jpg" class="d-block w-100" alt="10">
+        <img src='{% static "imagen/trabajador-servicio-coche-musculoso-reparando-vehiculo.jpg" %}' class="d-block w-100" alt="10">
         <div class="carousel-caption d-none d-md-block">
           <h5 class="parrafo-frenos">Revision tecnica</h5>
           <p class="parrafo-frenos">¡¡¡¡conoce como trabajamos!!!!</p>
