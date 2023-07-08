@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="website icon" type="png" href="imagen/rasho.png">
     <!--css-->
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="CSS/footer.css">
-    <link rel="stylesheet" type="text/css" href="CSS/trabajos.css">
-    <link rel=" stylesheet" type="text/css" href="CSS/nav.css">
+    <link rel="stylesheet" type="text/css" href='{%static "CSS/style.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{%static "CSS/footer.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{%static "CSS/trabajos.css" %}'>
+    <link rel=" stylesheet" type="text/css" href='{%static "CSS/nav.css" %}'>
     <!--limpiar cache-->
     <meta http-equiv=”Expires” content=”0″>
     <meta http-equiv=”Last-Modified” content=”0″>
@@ -33,9 +33,9 @@
 <body>
     <!--llamar al nav-->
     <div id="container">
-        <div include-Html="nav.html"></div>
+        <div include-Html='{%url "nav" %}'></div>
     </div>
-    <script src="assets/js/include-html.js"></script>
+    <script src='{%static "assets/js/include-html.js" %}'></script>
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -47,7 +47,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="imagen/mecanico 1.jpg" class="d-block w-100" alt="...">
+                <img src='{%static "imagen/mecanico 1.jpg" %}' class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block animate__animated animate__fadeIn">
                     <h5 class="parrafo-alineacion ">Fecha:02/05/22
                         Materiales:Gatas hidraulicas, llaves, repuestos
@@ -58,7 +58,7 @@
             </div>
 
             <div class="carousel-item">
-                <img src="imagen/mecanico 2.jpg" style="height: 100%; width: 100%;" alt="...">
+                <img src='{%static "imagen/mecanico 2.jpg" %}' style="height: 100%; width: 100%;" alt="...">
                 <div class="carousel-caption d-none d-md-block animate__animated animate__fadeIn">
                     <h5 class="parrafo-alineacion">Fecha:15/02/22
                         Materiales:Llaves,Prensa, instrumentos de seguridad
@@ -68,7 +68,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="imagen/mecanico.jpg" style="height: 100%; width: 100%;" alt="...">
+                <img src='{%static "imagen/mecanico.jpg" %}' style="height: 100%; width: 100%;" alt="...">
                 <div class="carousel-caption d-none d-md-block animate__animated animate__fadeIn">
                     <h5 class="parrafo-alineacion">Fecha:15/02/22
                         Materiales:Llaves,Prensa, instrumentos de seguridad
@@ -93,6 +93,6 @@
     ¡¡Muchas Gracias por ver!!
 
 </footer>
-<script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src='{%static "assets/js/bootstrap/bootstrap.bundle.min.js" %}'></script>
 
 </html>

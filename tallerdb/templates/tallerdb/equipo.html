@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Conocenos!</title>
-    <link rel="stylesheet" type="text/css" href="CSS/equipstyle.css">
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="CSS/footer.css">
-    <link rel="stylesheet" type="text/css" href="CSS/trabajos.css">
-    <link rel=" stylesheet" type="text/css" href="CSS/nav.css">
+    <link rel="stylesheet" type="text/css" href='{%static "CSS/equipstyle.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{%static "CSS/style.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{%static "CSS/footer.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{%static "CSS/trabajos.css" %}'>
+    <link rel=" stylesheet" type="text/css" href='{%static "CSS/nav.css" %}'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -21,15 +21,15 @@
 <body>
     <!--llamar al nav-->
     <div id="container">
-        <div include-Html="nav.html"></div>
+        <div include-Html='{%url "nav" %}'></div>
     </div>
-    <script src="assets/js/include-html.js"></script>
+    <script src='{%static "assets/js/include-html.js" %}'></script>
     <div class="body-equip">
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <img class="tam redon animate__animated animate__backInUp"
-                        src='{% static "https://img.freepik.com/foto-gratis/mecanico-automoviles-que-usa-herramienta-diagnostico-mientras-verifica-voltaje-bateria-automovil-taller_637285-4267.jpg?w=1060&t=st=1681709190~exp=1681709790~hmac=5e3776bea893a9272a80fb47b73ae745fa11227afe4f229e9317191569806002" %}'
+                        src= "https://img.freepik.com/foto-gratis/mecanico-automoviles-que-usa-herramienta-diagnostico-mientras-verifica-voltaje-bateria-automovil-taller_637285-4267.jpg?w=1060&t=st=1681709190~exp=1681709790~hmac=5e3776bea893a9272a80fb47b73ae745fa11227afe4f229e9317191569806002"
                         alt="">
                 </div>
                 <div class="flip-card-back ">
@@ -53,13 +53,13 @@
                 </div>
             </div>
         </div>
-        <div class='{% static "flip-card" %}'>
-            <div class='{% static "flip-card-inner" %}'>
-                <div class='{% static "flip-card-front" %}'>
+        <div class="flip-card" >
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
                     <img class="tam animate__animated animate__backInUp"
-                        src='{% static "https://u360campus.com/wp-content/uploads/2021/11/Featured_11302021-770x400.jpg" %}' alt="">
+                        src= "https://u360campus.com/wp-content/uploads/2021/11/Featured_11302021-770x400.jpg" alt="">
                 </div>
-                <div class='{% static "flip-card-back" %}'>
+                <div class="flip-card-back">
                     <h5>Nombre:</h5>
                     <p>Romina Diaz</p>
                     <h5>Ocupacion:</h5>
