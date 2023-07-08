@@ -1,0 +1,87 @@
+{%extends "tallerdb/base.html"%}
+
+{%block body%}
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="card">
+            <div class="card-body">
+                <form action="/registrar/" method="post">{%csrf_token%}
+                    <div class="form-group">
+                        <input type="text" id="txtRut" name="txtRut" class="form-control" 
+                        placeholder="Rut" minlength="8" maxlength="10" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtNombre" name="txtNombre" class="form-control" 
+                        placeholder="Nombre" maxlength="20" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtApellidoP" name="txtApellidoP" class="form-control" 
+                        placeholder="Apellido Paterno"  maxlength="20" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtApellidoM" name="txtApellidoM" class="form-control" 
+                        placeholder="apellido Paterno" maxlength="20" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtTelefono" name="txtTelefono" class="form-control" 
+                        placeholder="Telefono" maxlength="45" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="txtEmail" name="txtEmail" class="form-control" 
+                        placeholder="Email" required>                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtDireccion" name="txtDireccion" class="form-control" 
+                        placeholder="Direccion" maxlength="50" required>                        
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtActivo" name="txtActivo" class="form-control" 
+                        placeholder="Activo" maxlength="1" required>                        
+                    </div>
+                    <div class="form-group">
+                       <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>            
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <h1>Listado de clientes</h1>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Rut</th>
+                        <th>Nombre</th>
+                        <th>Apellido P</th>
+                        <th>Apellido M</th>
+                        <th>Telefono</th>
+                        <th>Email</th>
+                        <th>Direccion</th>
+                        <th colspan="2">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for c in clientes%}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{c.rut}}</td>
+                        <td>{{c.nombre}}</td>
+                        <td>{{c.apellido_paterno}}</td>
+                        <td>{{c.apellido_materno}}</td>
+                        <td>{{c.telefono}}</td>
+                        <td>{{c.email}}</td>
+                        <td>{{c.direccion}}</td>
+                        <td><a href="edit/{{c.rut}}" class="btn btn-info">Editar</a></td>
+                        <td><a href="elim/{{c.rut}}" class="btn btn-danger">Eliminar</a></td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+{%endblock%}

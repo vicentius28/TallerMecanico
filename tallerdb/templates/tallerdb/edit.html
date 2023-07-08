@@ -1,0 +1,46 @@
+{%extends "tallerdb/base.html"%}
+
+{%block body%}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <div class="card">
+            <div class="card-body">
+                <form action="editar/" method="post">{%csrf_token%}
+                    <div class="form-group">
+                        <input type="text" id="txtRut" name="txtCodigo" value="{{cliente.rut}}" class="form-control" placeholder="Rut"
+                            minlength="8" maxlength="10" readonly required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtNombre" name="txtNombre" value="{{cliente.nombre}}" class="form-control" placeholder="Nombre"
+                            maxlength="20" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtApellidoP" name="txtApellidoP" value="{{cliente.apellido_paterno}}" class="form-control"
+                            placeholder="Apellido Paterno" maxlength="20" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtApellidoM" name="txtApellidoM" value="{{cliente.apellido_materno}}" class="form-control"
+                            placeholder="apellido Paterno" maxlength="20" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtTelefono" name="txtTelefono" value="{{cliente.telefono}}" class="form-control"
+                            placeholder="Telefono" maxlength="45" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="txtEmail" name="txtEmail" value="{{cliente.email}}" class="form-control" placeholder="Email"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtDireccion" name="txtDireccion" value="{{cliente.direccion}}" class="form-control"
+                            placeholder="Direccion" maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

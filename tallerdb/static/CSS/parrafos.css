@@ -1,0 +1,52 @@
+.parrafo-especial {
+    background-color: brown;
+    text-decoration: black;
+    display: inline-block;
+    padding: 10px;
+    color: #ffffff;
+    border: 3px solid yellow;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    animation-name: ejemplo;
+    animation-duration: 20s;
+}
+
+.parrafo-especial:hover {
+    background-color: red;
+    transform: scale(1.2);
+}
+
+.parrafo-frenos {
+    color: rgb(150, 150, 1);
+}
+
+.parrafo-alineacion {
+    margin-left: 800px;
+    background-color: red;
+    text-decoration: pink;
+    display: inline-block;
+    padding: 20px;
+    color: white;
+    border: 3px solid yellow;
+    border-radius: 15px 50px;
+    transition: all 400ms ease;
+}
+
+.MARCASH1 {
+    background-color: rgba(250, 0, 0, 0.696);
+    text-decoration: black;
+    display: inline-block;
+    padding: 10px;
+    color: #ffffff;
+    border: 3px solid yellow;
+    border-radius: 4px;
+    margin-left: 30%;
+    margin-top: 2%;
+    border-radius: 7px;
+    opacity: 1;
+    position: static;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
