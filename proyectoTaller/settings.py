@@ -163,6 +163,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'vicente.farias2812@gmail.com'
 EMAIL_HOST_PASSWORD = 'hcsuccpxmsqoyjsk'
 EMAIL_USE_SSL = False
+DEFAULT_FROM_EMAIL ='vicente.farias2812@gmail.com'
 
 #configuraciones adicionales de Django-allauth
 if DEBUG:

@@ -3,6 +3,7 @@ from . import views
 from django.contrib.auth.decorators import login_required
 
 
+
 urlpatterns= [
     #templates
     path('',views.index, name='index'),

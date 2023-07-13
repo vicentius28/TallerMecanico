@@ -6,6 +6,7 @@ from django.core.mail import EmailMessage
 from django.contrib import messages
 from tallerdb.compra import Carrito
 
+
 def agregar_producto(request,id):
     carrito_compra= Carrito(request)
     producto =get_object_or_404 (Producto,id_producto=id)
@@ -60,8 +61,6 @@ def generarBoleta(request):
     carrito= Carrito(request)
     carrito.limpiar()
     return render(request, 'tallerdb/detallecarrito.html',datos)
-
-
 
 def tienda(request):
     return render(request, 'tallerdb/tienda.html')
