@@ -1,19 +1,80 @@
-from django.shortcuts import render,redirect
-from .models import Cliente
+from django.shortcuts import render,redirect,get_object_or_404
+from .models import Cliente, Producto, Boleta, detalle_boleta
 from django.conf import settings
 from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth import logout
-from django.views.generic import View
-@login_required
+from tallerdb.compra import Carrito
+
+def agregar_producto(request,id):
+    carrito_compra= Carrito(request)
+    producto =get_object_or_404 (Producto,id_producto=id)
+    cantidad_restar = 1
+    producto.stock -= cantidad_restar
+    carrito_compra.agregar(producto=producto)
+    producto.save()
+    return redirect('tienda')
+    
+def eliminar_producto(request,id):
+    carrito_compra= Carrito(request)
+    producto = get_object_or_404 (Producto,id_producto=id)
+    cantidad_restar = 1
+    producto.stock += cantidad_restar
+    carrito_compra.eliminar(producto=producto)
+    
+    return redirect('tienda')
+def restar_producto(request,id):
+    carrito_compra= Carrito(request)
+    producto = get_object_or_404 (Producto,id_producto=id)
+    cantidad_restar = 1
+    producto.stock += cantidad_restar
+    carrito_compra.restar(producto=producto)
+    producto.save()
+    return redirect('tienda')
+
+def limpiar_carrito(request):
+    carrito_compra = Carrito(request)
+    carrito_compra.limpiar()
+    return redirect('tienda')
+
+def generarBoleta(request):
+    precio_total=0
+    for key,value in request.session['carrito'].items():
+        precio_total = precio_total+ int(value['precio']) * int(value['cantidad'])
+    boleta = Boleta(total = precio_total)
+    boleta.save()
+    productoss=[]
+    for key,value in request.session['carrito'].items():
+            producto = Producto.objects.get(id_producto = value['id_producto'])
+            cant = value['cantidad']
+            subtotal = cant * int(value['precio'])
+            detalle = detalle_boleta(id_boleta = boleta, id_pro = producto, cantidad= cant, subtotal = subtotal)
+            detalle.save()
+            productoss.append(detalle)
+    datos={
+        'productos':productoss,
+        'fecha':boleta.fechaCompra,
+        'total':boleta.total
+    }
+    request.session['boleta']= boleta.id_boleta
+    carrito= Carrito(request)
+    carrito.limpiar()
+    return render(request, 'tallerdb/detallecarrito.html',datos)
+
+
+
+def tienda(request):
+    return render(request, 'tallerdb/tienda.html')
+
+
+def tienda(request):
+    productos=Producto.objects.all()
+    return render(request, 'tallerdb/tienda.html', {'productos':productos})
+
 def index(request):
-    context={}
-    return render(request, 'tallerdb/index.html', context)
-def salir (request):
-    logout(request)
-    return redirect('/')
+    return render(request, 'tallerdb/index.html')
+def profile(request):
+    return render(request, 'account/profile.html')
 def crud(request):
     clientes=Cliente.objects.all()
     return render(request, 'tallerdb/crud.html', {'clientes':clientes})
@@ -26,8 +87,8 @@ def equipo(request):
     return render(request, "tallerdb/equipo.html")
 def otros(request):
     return render(request, "tallerdb/otros.html")
-def inis(request):
-    return render(request, "tallerdb/inis.html")
+
+
 def eliminar(request,rut):
     cliente=Cliente.objects.get(rut=rut)
     cliente.delete()

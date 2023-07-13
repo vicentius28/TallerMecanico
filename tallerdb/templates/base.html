@@ -3,7 +3,6 @@
 <html lang="en">
   <head>
  <!--css-->
- <link rel="stylesheet" type="text/css" href='{% static "CSS/footer.css" %}'>
  <link rel=" stylesheet" type="text/css" href='{% static "CSS/trabajos.css" %}'>
  <link rel=" stylesheet" type="text/css" href='{% static "CSS/formulario.css" %}'>
  <link rel=" stylesheet" type="text/css" href='{% static "CSS/parrafos.css" %}'>
@@ -20,20 +19,18 @@
  <meta http-equiv=”Cache-Control” content=”no-cache, mustrevalidate”>
  <meta http-equiv=”Pragma” content=”no-cache”>
  <!--bootstrap-->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
  <!--cloudfare-->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
  <!--jquery-->
- <script src=https://code.jquery.com/jquery-1.11.3.min.js></script>
+ <script src=https://code.jquery.com/jquery-1.12.1.min.js></script>
  <!--sweetalert-->
  <script src=https://cdn.jsdelivr.net/npm/sweetalert2@11></script>
   </head>
   <body>
     
     <header>
-      {% load static %}
-      <link rel=" stylesheet" type="text/css" href='{% static "CSS/nav.css" %}' />
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid f-c">
           <img
@@ -82,14 +79,16 @@
             </div>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ul-enlances">
               <li class="nav-item">
-                <a class="nav-link css-nav" href='{% url "equipo" %}'>EQUIPO</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link css-nav" href='{% url "marcas" %}'>MARCAS</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link css-nav" href='{% url "crud" %}'
                   >LISTADO CLIENTE</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link css-nav" href='{% url "tienda" %}'
+                  >TIENDA</a
                 >
               </li>
             </ul>
@@ -113,7 +112,7 @@
                 <p class="css-menu-caja">{% if request.user.is_authenticated %}
                   <li><a  class="dropdown-item dropdown_sub css-nav">{{user.username | upper }}</a></li>
                   {% else %}
-                  <li><a  class="dropdown-item dropdown_sub css-nav" href={% url 'index' %}>PERFIL</a></li>
+                  <li><a  class="dropdown-item dropdown_sub css-nav">PERFIL</a></li>
                   {%endif%}</a>
                 </p>
                 <svg class="css-menu-int" focusable="false" aria-hidden="true"></svg
@@ -122,9 +121,13 @@
               <ul class="dropdown-menu">
                 <li>
                   {% if request.user.is_authenticated %}
-                  <li><a  class="dropdown-item dropdown_sub css-nav" href={% url "salir" %}>LOG OUT</a></li>
+                  <li><a  class="dropdown-item dropdown_sub css-nav" href={% url "profile" %}>MI PERFIL</a></li>
+                  <li><a  class="dropdown-item dropdown_sub css-nav" href={% url "account_logout" %}>LOG OUT</a></li>
                   {% else %}
-                  <li><a  class="dropdown-item dropdown_sub css-nav" href={% url 'index' %}>INICIAR SESIÓN</a></li>
+                  <li><a  class="dropdown-item dropdown_sub css-nav" href={% url 'account_login' %}>INICIAR SESIÓN</a></li>
+                  <li><a  class="dropdown-item dropdown_sub css-nav" href={% url 'account_signup' %}>REGISTRARSE</a></li>
+                  
+
                   {%endif%}</a>
                 </li>
               </ul>
@@ -156,6 +159,9 @@
                     href='{%url "otros" %}'
                     >OTROS TRABAJOS</a
                   >
+                  <li>
+                    <a class="dropdown-item dropdown_sub css-nav" href='{% url "equipo" %}'>EQUIPO</a>
+                  </li>
                 </li>
               </ul>
             </div>
@@ -163,7 +169,7 @@
         </div>
       </nav>
     </header>    
+    {%block content%}
+  {% endblock %}
   </body>
 </html>
-{%block content%}
-{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "../base.html" %}
+{%block content%}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href='{% static "CSS/footer.css" %}'>
+    <link rel=" stylesheet" type="text/css" href='{% static "CSS/trabajos.css" %}'>
+    <link rel=" stylesheet" type="text/css" href='{% static "CSS/formulario.css" %}'>
+    <link rel=" stylesheet" type="text/css" href='{% static "CSS/parrafos.css" %}'>
+    <link rel=" stylesheet" type="text/css" href='{% static "CSS/nav.css" %}'>
+    <!--html-->
+    <title>TALLER MECANICO RAYO MCQUEEN</title>
+    <meta charset=" UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href='{% static "imagen/rasho.png" %}'>
+    <!--limpiar cache-->
+    <meta http-equiv=”Expires” content=”0″>
+    <meta http-equiv=”Last-Modified” content=”0″>
+    <meta http-equiv=”Cache-Control” content=”no-cache, mustrevalidate”>
+    <meta http-equiv=”Pragma” content=”no-cache”>
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--cloudfare-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--jquery-->
+    <script src=https://code.jquery.com/jquery-1.11.3.min.js></script>
+    <!--sweetalert-->
+    <script src=https://cdn.jsdelivr.net/npm/sweetalert2@11></script>
+    
+<script src='{% static "assets/js/bootstrap/bootstrap.bundle.min.js" %}'></script>
+</head>
+<body>
+    <div class="container">
+        <h2> Tienda </h2><br>
+        <div class ="row">
+            <div class ="col-8">
+                <div class="row" style="padding: 5px 0;">
+                    <div class="col-12">
+                        <div class="row">
+                            {% for producto in productos %}
+                            <div class="col-6">
+                                <div class="card text-center">
+                                    {%if producto.imagen%}
+                                        <img src="{{ producto.imagen.url }}" class="card-img-top">
+                                    {%else%}
+                                        <img src="{% static 'imagenes/llanta.png'%}" class="card-img-top">
+                                    {%endif%}
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-wight:bold;"> id_producto : {{producto.id_producto }}</h5>
+                                        <p class="card-text">
+                                            Nombre : {{producto.nombre}}<br>
+                                            Precio:$ {{producto.precio}}<br>
+                                            stock: {{producto.stock}}<br>
+
+                                        </p>
+                                        <a href="{% url 'agregar' producto.id_producto %}" class="btn btn-outline-success">agregar al carro</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {%endfor%}
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="col-4">
+                {%include "tallerdb/carrito.html"%}
+            </div>
+        </div>
+    
+</div>
+</body>
+</html>
+{% endblock %}
